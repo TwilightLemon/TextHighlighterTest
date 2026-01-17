@@ -22,7 +22,8 @@
                                            Storyboard.TargetProperty="HighlightIntensity">
                 <DoubleAnimationUsingKeyFrames.KeyFrames>
                     <EasingDoubleKeyFrame KeyTime="0:0:0" Value="1" />
-                    <EasingDoubleKeyFrame KeyTime="0:0:1" Value="0" />
+                    <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="2" />
+                    <EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="0" />
                 </DoubleAnimationUsingKeyFrames.KeyFrames>
             </DoubleAnimationUsingKeyFrames>
         </Storyboard>
@@ -33,13 +34,8 @@
         </EventTrigger>
     </Window.Triggers>
     <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="11*" />
-            <RowDefinition Height="476*" />
-        </Grid.RowDefinitions>
         <local:HighlightTextBlock x:Name="glow"
-                                  Grid.Row="1"
-                                  Margin="40,0"
+                                  Margin="40,0,40,100"
                                   VerticalAlignment="Center"
                                   FontSize="56"
                                   FontWeight="Bold"
@@ -48,6 +44,30 @@
                                   HighlightPos="0.5"
                                   HighlightWidth="0.4"
                                   Text="Highlighter TextBlock"
+                                  TextAlignment="Left"
+                                  TextTrimming="CharacterEllipsis"
+                                  TextWrapping="Wrap"
+                                  UseAdditive="true" />
+        <local:HighlightTextBlock Margin="40,0,40,96"
+                                  VerticalAlignment="Bottom"
+                                  FontSize="56"
+                                  FontWeight="Bold"
+                                  Foreground="#5EFFFFFF"
+                                  HighlightColor="#66F3AC12"
+                                  HighlightPos="1"
+                                  Text="混色文本"
+                                  TextAlignment="Left"
+                                  TextTrimming="CharacterEllipsis"
+                                  TextWrapping="Wrap"
+                                  UseAdditive="true" />
+        <local:HighlightTextBlock Margin="40,0,40,53"
+                                  VerticalAlignment="Bottom"
+                                  FontSize="32"
+                                  FontWeight="Bold"
+                                  Foreground="#5EFFFFFF"
+                                  HighlightColor="#89E32121"
+                                  HighlightPos="1"
+                                  Text="混色文本"
                                   TextAlignment="Left"
                                   TextTrimming="CharacterEllipsis"
                                   TextWrapping="Wrap"
